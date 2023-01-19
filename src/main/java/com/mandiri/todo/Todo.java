@@ -10,9 +10,9 @@ public class Todo {
     private String username;
     private String description;
     private LocalDate targetDate;
-    private boolean isDone;
+    private String isDone;
 
-    public Todo(String id, String username, String description, LocalDate targetDate, boolean isDone) {
+    public Todo(String id, String username, String description, LocalDate targetDate, String isDone) {
         this.id = id;
         this.username = username;
         this.description = description;
@@ -52,12 +52,12 @@ public class Todo {
         this.targetDate = targetDate;
     }
 
-    public boolean isDone() {
+    public String getIsDone() {
         return isDone;
     }
 
-    public void setDone(boolean done) {
-        isDone = done;
+    public void setIsDone(String isDone) {
+        this.isDone = isDone;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class Todo {
                 ", username='" + username + '\'' +
                 ", description='" + description + '\'' +
                 ", targetDate=" + targetDate +
-                ", isDone=" + isDone +
+                ", isDone='" + isDone + '\'' +
                 '}';
     }
 }

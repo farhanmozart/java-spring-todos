@@ -1,12 +1,46 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 	<head>
+	    <link href="webjars\bootstrap\5.1.3\css\bootstrap.min.css" rel="stylesheet">
 		<title>List Todos Page</title>
 	</head>
 	<body>
-		<div>
-		    Welcome to Mandiri To-do List, ${name}!
-		</div><div>
-		    Your Todos are ${todos}
+            <div class="container">
+                <nav class="navbar navbar-light bg-light">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                      <h2>IT APD Todo-List</h2>
+                    </a>
+                  </div>
+                </nav>
+                <hr>
+                <div>
+                    <h3>Your Todos are</h3>
+                </div>
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Description</th>
+                            <th>Target Date</th>
+                            <th>Is Done</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach items="${todos}" var="todo">
+                            <tr>
+                                <td>${todo.id}</td>
+                                <td>${todo.username}</td>
+                                <td>${todo.description}</td>
+                                <td>${todo.targetDate}</td>
+                                <td>${todo.isDone}</td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
 		</div>
+		<script src="webjars\bootstrap\5.1.3\js\bootstrap.min.js"></script>
+		<script src="webjars\jquery\3.6.0\jquery.min.js"></script>
 	</body>
 </html>
