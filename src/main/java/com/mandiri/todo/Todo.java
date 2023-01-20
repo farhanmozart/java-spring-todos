@@ -6,13 +6,13 @@ import java.time.LocalDate;
 
 public class Todo {
 
-    private String id;
+    private Integer id;
     private String username;
     private String description;
     private LocalDate targetDate;
     private String isDone;
 
-    public Todo(String id, String username, String description, LocalDate targetDate, String isDone) {
+    public Todo(Integer id, String username, String description, LocalDate targetDate, String isDone) {
         this.id = id;
         this.username = username;
         this.description = description;
@@ -20,11 +20,11 @@ public class Todo {
         this.isDone = isDone;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -63,7 +63,7 @@ public class Todo {
     @Override
     public String toString() {
         return "Todo{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", username='" + username + '\'' +
                 ", description='" + description + '\'' +
                 ", targetDate=" + targetDate +

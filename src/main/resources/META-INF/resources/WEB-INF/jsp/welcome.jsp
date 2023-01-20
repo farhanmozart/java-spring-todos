@@ -11,6 +11,7 @@
        <div class="container">
         <div class="text-center mt-5">
         <h1>Mandiri Todo List</h1>
+        <p class="lead">Welcome, <b>${name}</b></p>
         <p class="lead">Aplikasi pencatatan daftar todo</p>
         <a href="list-todos" class="btn btn-secondary" role="button">Manage Todo</a>
        </div>
